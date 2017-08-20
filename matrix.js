@@ -4,7 +4,7 @@ document.getElementById('tcontainer').appendChild(mytable);
 var arrayOfObjects;
 var rowsCount=0;
 var columsCount=0;
-var arrayOfAmountObjects;
+var arrayOfObjectsClone;
 var numberForIllumination;
 var arrayOfElementForIllumination;
 var arrayOfIdIlluminationOfElements;
@@ -13,7 +13,7 @@ function buttonClickHandler(button){
     button.style.display = "none";
     readData();
     createMatrix();
-    createAmountArray();
+    createCloneArray();
     createTable();
     addEventLisener();
     fillTableWithData();
@@ -27,7 +27,7 @@ function buttonClickHandler(button){
 function buttonClickHandlerForAddNewRow() {
     rowsCount++;
     addNewRowInArrayOfObjects();
-    addNewRowInAmountArray();
+    addNewRowInCloneArray();
     createTableOfnewRow();
     addEventLisener();
     fillTableWithData();
@@ -50,9 +50,9 @@ function createTableOfnewRow() {
     }
 }
 
-function addNewRowInAmountArray(){
+function addNewRowInCloneArray(){
         for(var j=0; j<columsCount; j++){
-            arrayOfAmountObjects.push(arrayOfObjects[rowsCount-1][j].amount);
+            arrayOfObjectsClone.push(arrayOfObjects[rowsCount-1][j]);
         }
 }
 
@@ -72,11 +72,11 @@ function createMatrix(){
     }
 }
 
-function createAmountArray(){
-    arrayOfAmountObjects=[];
+function createCloneArray(){
+    arrayOfObjectsClone=[];
     for(var i=0; i<rowsCount; i++){
         for(var j=0; j<columsCount; j++){
-             arrayOfAmountObjects.push(arrayOfObjects[i][j].amount);
+             arrayOfObjectsClone.push(arrayOfObjects[i][j]);
         }
     }
 }
@@ -149,7 +149,7 @@ function onCellClick(event) {
 function increaseDataObjectAmount(id){    
     var obj = getDataObjectById(id);
     obj.amount++;
-    onMouseOutCell(event)
+    onMouseOutCell(event);
     onMouseOverCell(event);
 }
 
@@ -182,24 +182,27 @@ function addEventLisener(){
 
 function onMouseOverCell(event){
     var obj = getDataObjectById(event.target.id);
-    deleteAmountFromArray(obj.amount);
+    deleteAmountFromArray(obj.id);
     findNearestElementInArray(obj.amount);
+    createCloneArray();
+    deleteAmountFromArray(obj.id);
     createTableIdArrayForIdllumination();
     illuminationTable();
 }
 
 function onMouseOutCell(event){
-    createAmountArray();
+    createCloneArray();
     for (i=0; i<arrayOfIdIlluminationOfElements.length; i++){
         document.getElementById(arrayOfIdIlluminationOfElements[i]).style.background= 'linear-gradient(to right, #AFCDE7 100%, #AFCDE7 0%)';
     }
     
 }
 
-function deleteAmountFromArray(amount){
+function deleteAmountFromArray(id){
     for(var i = 0; i <rowsCount*columsCount; i++){
-        if(arrayOfAmountObjects[i] === amount){
-            arrayOfAmountObjects.splice(i,1);
+        if(arrayOfObjectsClone[i].id === id){
+            arrayOfObjectsClone.splice(i,1);
+            break;
         }
     }
 }
@@ -208,17 +211,19 @@ function  findNearestElementInArray(amount){
     var i=0;
     var minDiff=1000;
     var result;
+    var resultID;
     arrayOfElementForIllumination=[];
     while(arrayOfElementForIllumination.length!==numberForIllumination){
-         for(i in arrayOfAmountObjects){ 
-         var min=Math.abs(amount-arrayOfAmountObjects[i]);
+         for(i in arrayOfObjectsClone){
+         var min=Math.abs(amount-arrayOfObjectsClone[i].amount);
             if(min<=minDiff){
                 minDiff=min;
-                result=arrayOfAmountObjects[i];
+                result=arrayOfObjectsClone[i].amount;
+                resultID=arrayOfObjectsClone[i].id;
             }
         }
         arrayOfElementForIllumination.push(result);
-        deleteAmountFromArray(result);
+        deleteAmountFromArray(resultID);
         minDiff=1000;
     }
 }
@@ -226,25 +231,14 @@ function  findNearestElementInArray(amount){
 function createTableIdArrayForIdllumination(){
     arrayOfIdIlluminationOfElements=[];
     var k=0;
-    for (h=0; h<=numberForIllumination; h++){
-        for (i=0; i<rowsCount; i++){
-            for(j=0; j<columsCount; j++){
-                if(arrayOfObjects[i][j].amount === arrayOfElementForIllumination[k]){
-                arrayOfIdIlluminationOfElements.push(arrayOfObjects[i][j].id);
+    for (var h=0; h<=numberForIllumination; h++){
+        for (var i=0; i<rowsCount*columsCount-1; i++){
+                if(arrayOfObjectsClone[i].amount === arrayOfElementForIllumination[k]){
+                arrayOfIdIlluminationOfElements.push(arrayOfObjectsClone[i].id);
                 k++;
                 }
             }    
         }
-    }
-    for (var i=0; i<rowsCount; i++){
-        for(var j=0; j<columsCount; j++){
-           if(arrayOfObjects[i][j].amount === arrayOfElementForIllumination[k]){
-               arrayOfIdIlluminationOfElements.push(arrayOfObjects[i][j].id);
-               k++;
-           }
-        }    
-    }
-    console.log(arrayOfIdIlluminationOfElements);
 }
 
 function illuminationTable(){
@@ -260,8 +254,7 @@ function onMouseOverSumBlock(event) {
 function changeToPercent(classname){
     var arrayOfClassElement=document.getElementsByClassName(classname);
     for (var i=0; i<arrayOfClassElement.length-1; i++) {
-        var amount = arrayOfClassElement[i].innerHTML;
-        var percent=amount/arrayOfClassElement[arrayOfClassElement.length-1].innerHTML;
+        var percent=arrayOfClassElement[i].innerHTML/arrayOfClassElement[arrayOfClassElement.length-1].innerHTML;
         arrayOfClassElement[i].innerHTML=(parseInt(percent*100))+'%';
         paintedBlock(arrayOfClassElement[i],percent);
     }
@@ -270,23 +263,20 @@ function changeToPercent(classname){
 function paintedBlock(arrayOfClassElement, percent) {
     var a=0;
     var percenta=(parseInt(percent*100));
-    // arrayOfClassElement.style.backgroundImage.style.visibility = "inline";
     arrayOfClassElement.style.background= 'linear-gradient(to right, #e50b2f '+percenta.toString()+'%, #AFCDE7 '+a.toString()+'%)';
 }
 
-function paintedBlockBack() {
-    for (var i=0; i<rowsCount; i++){
-        for(var j=0; j<columsCount; j++){
-            mytable.rows[i].cells[j].style.background = 'linear-gradient(to right, #AFCDE7 100%, #AFCDE7 0%)';
-        }
+function onMouseOutSumBlock(event) {
+    var arrayOfClassElement=document.getElementsByClassName(event.target.className);
+    for (var i=0; i<arrayOfClassElement.length-1; i++) {
+        var cell = arrayOfClassElement[i];
+        var object = getDataObjectById(cell.id);
+        cell.innerHTML=object.amount;
+        cell.style.background = 'linear-gradient(to right, #AFCDE7 100%, #AFCDE7 0%)';
     }
 }
 
-function onMouseOutSumBlock(event) {
-    fillTableWithData();
-    paintedBlockBack();
-}
-function  buttonClickHandlerForAddDeleteRow() {
+function  buttonClickHandlerForDeleteRow() {
     deleteObjFromArray();
     preparationDeleteAmountFromArray();
     deleteRow();
@@ -307,7 +297,7 @@ function deleteRow() {
 
 function preparationDeleteAmountFromArray(){
     for(var i=0; i<columsCount-1;i++){
-        deleteAmountFromArray(mytable.rows[rowsCount-1].cells[i].amount);
+        deleteAmountFromArray(mytable.rows[rowsCount-1].cells[i].id);
     }
 }
 
