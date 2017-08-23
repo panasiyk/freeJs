@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c557b9fb-20b2-468a-8e03-411d249ded94" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/andryProduction.html" afterPath="$PROJECT_DIR$/andryProduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matrix.js" afterPath="$PROJECT_DIR$/matrix.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="andryProduction.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/andryProduction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -31,8 +30,8 @@
       <file leaf-file-name="matrix.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matrix.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="248" column="0" lean-forward="true" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+            <state relative-caret-position="-1377">
+              <caret line="147" column="6" lean-forward="true" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -49,24 +48,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getd</find>
-      <find>arrayOfObjectsClone</find>
-      <find>del</find>
-      <find>near</find>
-      <find>NEar</find>
-      <find>createTable</find>
-      <find>mytable</find>
-      <find>fillTableWithData</find>
-      <find>fillAverageBlockWithData</find>
-      <find>fillSumBlockWithData</find>
-      <find>readData</find>
       <find>createMatrix</find>
       <find>createCloneArray</find>
       <find>addNewRowInArrayOfObjects</find>
       <find>addNewRowInCloneArray</find>
       <find>createTableOfnewRow</find>
       <find>createTableIdArrayForIdllumination</find>
-      <find>deleteAmountFromArray</find>
       <find>illuminationTable</find>
       <find>getDataObjectById</find>
       <find>deleteRow</find>
@@ -75,10 +62,22 @@
       <find>addEventLisener</find>
       <find>addEventListener</find>
       <find>changeToPercent</find>
-      <find>createClassForFindPercent</find>
-      <find>findNearestElementInArray</find>
       <find>ave</find>
+      <find>fillSumBlockWithData</find>
       <find>onMouseOutCell</find>
+      <find>arrayOfObjectsClone</find>
+      <find>preparationDeleteCloneObjectFromArray</find>
+      <find>getDataObjectById(event.target.id);</find>
+      <find>deleteAmountFromArray</find>
+      <find>findNearestElementInArray</find>
+      <find>neare</find>
+      <find>columnsCount</find>
+      <find>createClassForFindPercent</find>
+      <find>deleteObjFromArray</find>
+      <find>getArrayOfObjects</find>
+      <find>dataModuleObj.getArrayOfObjects</find>
+      <find>dataModule.getArrayOfObjects</find>
+      <find>dataModule.getArrayOfIdIlluminationOfElements</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,12 +87,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/include.postload.js" />
-        <option value="chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/adblock-uiscripts-rightclick_hook.js" />
         <option value="$PROJECT_DIR$/table.css" />
         <option value="$PROJECT_DIR$/random.js" />
         <option value="$PROJECT_DIR$/yraProduction.html" />
         <option value="$PROJECT_DIR$/q.js" />
         <option value="$PROJECT_DIR$/andryProduction.html" />
+        <option value="chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/adblock-uiscripts-rightclick_hook.js" />
         <option value="$PROJECT_DIR$/matrix.js" />
       </list>
     </option>
@@ -119,7 +118,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -132,25 +131,11 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MainProjectJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MainProjectJS" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
@@ -212,11 +197,16 @@
       <workItem from="1503407236634" duration="599000" />
       <workItem from="1503408100154" duration="64000" />
       <workItem from="1503408221815" duration="6216000" />
+      <workItem from="1503417416991" duration="13755000" />
+      <workItem from="1503441897106" duration="3984000" />
+      <workItem from="1503445919656" duration="1254000" />
+      <workItem from="1503469676526" duration="1825000" />
+      <workItem from="1503490151986" duration="6673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72145000" />
+    <option name="totallyTimeSpent" value="99636000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -230,15 +220,15 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2940171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15213676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -256,7 +246,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="83" />
+      <option name="time" value="107" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -530,16 +520,16 @@
     <entry file="file://$PROJECT_DIR$/q.js" />
     <entry file="file://$PROJECT_DIR$/andryProduction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matrix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="248" column="0" lean-forward="true" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+        <state relative-caret-position="-1377">
+          <caret line="147" column="6" lean-forward="true" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
           <folding />
         </state>
       </provider>
